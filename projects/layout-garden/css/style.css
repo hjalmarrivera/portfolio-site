@@ -1,0 +1,229 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+/*@import 'mod1.css'*/
+
+html {
+	background-color: white;
+	background-image: url('../images/curve.svg');
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	padding: 10px;
+	margin-top: 40px;
+	height: 100vh;
+}
+
+inner-column {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+}
+
+main {
+	border: 1px solid #ffe000;
+}
+
+/* TYPOGRAPHY */
+h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	letter-spacing: -0.1rem;
+}
+
+.text-color {
+	color: #38afff;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+p, li {
+	font-size: 1.2rem;
+	max-width: 62ch;
+	line-height: 1.3;
+}
+
+a {
+	text-decoration: none;
+	color: #38afff;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: #ffe000;
+}
+
+nav {
+	display: flex;
+	gap: 20px;
+
+}
+
+ul {
+	list-style: "— " inside;
+}
+
+em {
+	text-decoration: #ffe000 underline;
+	text-underline-position: under;
+}
+
+/* SPACING */
+header {
+	margin-bottom: 40px;
+}
+
+h1 + h2 {
+	padding: 10px 0px;
+}
+
+h2 + ul {
+	padding: 10px 0px;
+}
+
+p + p {
+	padding-top: 15px;
+}
+
+nav {
+	margin: 50px 0px;
+}
+
+ul {
+	margin-bottom: 40px;
+}
+
+ul a {
+	display: inline;
+}
+
+ol li {
+	padding-bottom: 40px;
+}
+
+h1 + picture {
+	margin-top: 40px;
+}
+
+h1 + p {
+	margin-top: 40px;
+}
+
+picture + p {
+	margin-top: 40px;
+}
+
+picture {
+	max-width: 500px;
+}
+
+/* MODULE 1 */
+.mod1 header {
+	margin: 0px;
+}
+
+.mod1 nav {
+	margin: 0px;
+}
+
+.mod1 .site-header {
+  padding: 5px;
+  background-color: white;
+}
+
+.mod1 .site-menu a, .logo-menu a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+  color: inherit;
+}
+
+.mod1 nav a:hover {
+  background-color: rgba(0,0,0,.1);
+}
+
+.mod1 .site-menu {
+  background-color: var(--pe-cyan-light);
+}
+
+.mod1 .logo-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--pe-purple-light);
+}
+
+.mod1 *:focus {
+  outline: 3px solid black;
+}
+
+
+
+@media (max-width: 599px) { /* only if small! */
+  .mod1 .site-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* */
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-100%, 0); /* another fun option */
+    transform: scale(.5);
+    /* */
+    transition: 0s;
+  }
+  .mod1 .site-menu a {
+    min-width: 200px;
+    text-align: center;
+  }
+  .mod1 .site-menu .corner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  body.small-menu-open .site-menu {
+    opacity: 1;
+    pointer-events: initial;
+    transform: translate(0, 0); /* another fun option */
+    transform: scale(1);
+    transition: .2s;
+  }
+}
+
+
+
+@media (min-width: 600px) {
+
+  .toggle {
+    display: none;
+  }
+
+  .mod1 .site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mod1 .site-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+}

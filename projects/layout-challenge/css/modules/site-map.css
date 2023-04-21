@@ -1,0 +1,60 @@
+
+site-map {
+  display: block;
+  position: relative;
+  /* */
+  padding-top: 40px;
+  padding-bottom: 120px;
+  /* */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+site-map h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: .8rem;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: #b3bcb9;
+}
+
+site-map a {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 10px 0px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+site-map a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+site-map .logotype {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+site-map .logotype:hover {
+  text-decoration: none;
+}
+
+site-map .site-menu a:nth-of-type(2) {
+  display: none;
+}
+
+site-map .copyright {
+  position: absolute;
+  bottom: 0;
+  color: #b3bcb9;
+  font-family: 'Space Grotesk', sans-serif;
+}
